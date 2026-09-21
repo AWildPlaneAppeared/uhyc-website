@@ -45,14 +45,19 @@ python3 -m http.server 8124
 ```
 then open http://localhost:8124
 
-## Deploy on GitHub Pages
+## Hosting
 
-1. Create a repository (for example `uhyc-website`) and push this folder to it.
-2. Settings -> Pages -> Source: "Deploy from a branch", branch `main`, folder `/ (root)`.
-3. The site appears at `https://<org>.github.io/uhyc-website/` within a minute.
-4. Custom domain: add `upperharbouryouthcouncil.org.nz` under Settings -> Pages ->
-   Custom domain (this writes a `CNAME` file), then at the domain registrar point
-   the apex to GitHub's A records (185.199.108.153, .109.153, .110.153, .111.153)
-   and `www` as a CNAME to `<org>.github.io`. Tick "Enforce HTTPS" once it resolves.
+Live at **https://uhyc.org.nz** (GitHub Pages, repo `AWildPlaneAppeared/uhyc-website`,
+branch `main`, root folder). `www.uhyc.org.nz` and
+`awildplaneappeared.github.io/uhyc-website` redirect there. HTTPS is enforced;
+GitHub renews the Let's Encrypt certificate itself.
+
+Deploy = push to `main`. The site rebuilds in about a minute.
+
+Domain: `uhyc.org.nz` is registered at domain.co.nz (The Domain Name Company) under
+the UHYC account, auto-renew on, expires 21 Sep 2027. DNS there: four A records at
+the root (185.199.108.153, .109.153, .110.153, .111.153) and `www` CNAME to
+`awildplaneappeared.github.io`. The `CNAME` file in this repo tells GitHub the
+domain; do not delete it.
 
 `.nojekyll` is included so GitHub serves the files as-is.
