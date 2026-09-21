@@ -1,0 +1,50 @@
+{
+ "viewBox": [
+  0,
+  0,
+  595,
+  588
+ ],
+ "labels": [
+  {
+   "name": "Whenuapai",
+   "x": 95.1,
+   "y": 404.3
+  },
+  {
+   "name": "Hobsonville",
+   "x": 227.3,
+   "y": 446.3
+  },
+  {
+   "name": "Rosedale",
+   "x": 486.7,
+   "y": 217.1
+  },
+  {
+   "name": "Schnapper Rock",
+   "x": 381.2,
+   "y": 251.7
+  },
+  {
+   "name": "Pinehill",
+   "x": 511.1,
+   "y": 131.4
+  },
+  {
+   "name": "Windsor Park",
+   "x": 578.1,
+   "y": 184.9
+  },
+  {
+   "name": "Oteha",
+   "x": 504.9,
+   "y": 86.9
+  },
+  {
+   "name": "West Harbour",
+   "x": 389.5,
+   "y": 201.1
+  }
+ ]
+}

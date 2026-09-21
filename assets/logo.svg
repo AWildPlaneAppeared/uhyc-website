@@ -1,0 +1,19 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Upper Harbour Youth Council">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5ad7ff"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <!-- Hex emblem -->
+  <path d="M60 6 L106 32 L106 88 L60 114 L14 88 L14 32 Z"
+        fill="none" stroke="url(#lg)" stroke-width="3"/>
+  <path d="M60 18 L96 38 L96 82 L60 102 L24 82 L24 38 Z"
+        fill="#0b1226" stroke="#23314f" stroke-width="1.5"/>
+  <!-- Stylised harbour wave -->
+  <path d="M30 74 C42 60 50 84 62 70 C74 56 82 80 92 66"
+        fill="none" stroke="url(#lg)" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- UH monogram / spark -->
+  <text x="60" y="58" text-anchor="middle" font-family="Sora, sans-serif"
+        font-size="30" font-weight="800" fill="#eaf2ff" letter-spacing="1">UH</text>
+</svg>
