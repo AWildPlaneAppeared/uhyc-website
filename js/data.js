@@ -24,7 +24,7 @@ window.UHYC = {
     calendarId: "upperharbouryouth@gmail.com",
     // Contact form: paste a Formspree endpoint (https://formspree.io/f/xxxx) to make the
     // form send. Leave blank and the form opens the visitor's email app instead.
-    formEndpoint: "",
+    formEndpoint: "https://formspree.io/f/mzezegqz",
     localBoard: "https://www.aucklandcouncil.govt.nz/en/about-auckland-council/how-auckland-council-works/local-boards/all-local-boards/upper-harbour-local-board/upper-harbour-plans-agreements-reports.html",
   },
 
