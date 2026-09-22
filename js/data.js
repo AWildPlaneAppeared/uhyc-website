@@ -69,7 +69,7 @@ window.UHYC = {
       text: "A community book swap at the Albany Market, a Short-Story Competition, De-Stress, a University Expo, and the Art Expo returns with over 100 submissions and its first opening ceremony.",
       photo: "assets/hero-photo.jpg" },
     { year: "2026", title: "A full calendar",
-      text: "Cultural Night, an Overseas University Expo, the Art Exhibition at Sunderland Lounge, a Beach Cleanup, and our first Enviro Fair.",
+      text: "Cultural Night, an Overseas University Expo, the Art Exhibition at Sunderland Lounge, a Beach Cleanup, with more still to come.",
       photo: "assets/photos/timeline/2026.jpg" },
   ],
 
@@ -77,13 +77,12 @@ window.UHYC = {
      `when` is shown as a label. Use `date` (ISO) for upcoming events so they
      can move into "recent" automatically once the date has passed. */
   events: [
-    { title: "Enviro Fair", date: "2026-09-27", when: "Sunday 27 September, 2 to 5pm",
-      where: "Albany Stadium, South Lounge", photo: "assets/photos/group.jpg",
-      text: "Hands-on science and sustainability for local young people: live experiments, interactive demos, a science fair with prizes, and spot prizes throughout the afternoon.",
-      featured: true },
     { title: "Films & Frosting", date: "2026-11-20", dateTbc: true, when: "Term 4, date to be confirmed", where: "Albany Community Hub",
       photo: "assets/photos/films-and-frosting.jpg",
       text: "A movie night with cupcake decorating and board games. A relaxed end-of-year study break for local students." },
+    // Placeholder while the next events are being planned. No date, so it always sits last under "Coming up".
+    { title: "Two more events in the works", when: "Dates coming soon", photo: "assets/photos/group.jpg",
+      text: "The council is planning two more events for the rest of the year. Follow us on Instagram for the announcements, or get in touch below if you have an idea." },
     { title: "Beach Cleanup", date: "2026-08-22", when: "August 2026", photo: "assets/photos/beach-cleanup.jpg",
       text: "A service morning restoring one of our local beaches, open to anyone collecting volunteer hours." },
     { title: "Art Exhibition 2026", date: "2026-07-11", when: "July 2026", where: "Sunderland Lounge, Hobsonville",

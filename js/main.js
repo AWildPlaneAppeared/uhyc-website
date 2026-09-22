@@ -165,7 +165,7 @@
     $("#focusAreas").textContent = D.about.focusAreas.map((f) => f.toLowerCase()).join(", ");
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const isPast = (ev) => ev.date && new Date(ev.date + "T23:59:59") < today;
-    const upcoming = D.events.filter((e) => !isPast(e)).sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+    const upcoming = D.events.filter((e) => !isPast(e)).sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"));   // undated last
     const recent = D.events.filter(isPast).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
     const up = $("#upcomingEvents");
@@ -173,10 +173,10 @@
       const a = document.createElement("article");
       a.className = "up-card" + (i === 0 ? " featured" : "");
       const dt = ev.date ? new Date(ev.date + "T12:00:00") : null;
-      const day = ev.dateTbc ? "TBC" : (dt ? dt.toLocaleDateString("en-NZ", { day: "numeric" }) : "");
-      const mon = ev.dateTbc ? (dt ? dt.toLocaleDateString("en-NZ", { month: "short" }) : "") : (dt ? dt.toLocaleDateString("en-NZ", { month: "short" }) : "");
+      const day = !dt ? "Soon" : (ev.dateTbc ? "TBC" : dt.toLocaleDateString("en-NZ", { day: "numeric" }));
+      const mon = dt ? dt.toLocaleDateString("en-NZ", { month: "short" }) : "";
       a.innerHTML = `${photoTag(ev.photo, "up-photo")}<div class="up-body">
-          <div class="up-date"><b class="${ev.dateTbc ? "tbc" : ""}">${esc(day)}</b><span>${esc(mon)}</span></div>
+          <div class="up-date"><b class="${(ev.dateTbc || !dt) ? "tbc" : ""}">${esc(day)}</b>${mon ? `<span>${esc(mon)}</span>` : ""}</div>
           <div class="up-text"><h4>${esc(ev.title)}</h4><p class="up-when">${esc(ev.when || "")}${ev.where ? " · " + esc(ev.where) : ""}</p><p>${esc(ev.text)}</p></div>
         </div>`;
       up.appendChild(a);
