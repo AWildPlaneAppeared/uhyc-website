@@ -41,12 +41,19 @@ window.UHYCOrg = (function () {
   let PHOTOS = {};
   function person(p, kind) {
     const c = el("div", `card ${kind}`);
-    const photo = p.photo || PHOTOS[String(p.name).toLowerCase()];
+    let photo = p.photo || PHOTOS[String(p.name).toLowerCase()];
     if (photo) {
-      const img = el("img", "avatar");
-      img.src = photo; img.alt = ""; img.loading = "lazy";
-      img.onerror = () => { img.replaceWith(el("span", "avatar", esc(initials(p.name)))); };
-      c.appendChild(img);
+      // A photo can be a path, or { src, zoom, x, y } to zoom and shift it inside the circle
+      if (typeof photo === "string") photo = { src: photo };
+      const wrap = el("span", "avatar photo");
+      const img = el("img");
+      img.src = photo.src; img.alt = ""; img.loading = "lazy";
+      if (photo.zoom || photo.x || photo.y) {
+        img.style.transform = `scale(${photo.zoom || 1}) translate(${photo.x || 0}%, ${photo.y || 0}%)`;
+      }
+      img.onerror = () => { wrap.replaceWith(el("span", "avatar", esc(initials(p.name)))); };
+      wrap.appendChild(img);
+      c.appendChild(wrap);
     } else {
       c.appendChild(el("span", "avatar", esc(initials(p.name))));
     }
@@ -109,7 +116,7 @@ window.UHYCOrg = (function () {
     const route = () => { clearTimeout(timer); timer = setTimeout(() => routeLines(org, svg), 16); };
     const ro = new ResizeObserver(route);
     ro.observe(org);
-    org.querySelectorAll("img.avatar").forEach((img) => img.addEventListener("load", route));
+    org.querySelectorAll(".avatar.photo img").forEach((img) => img.addEventListener("load", route));
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(route);
     routeLines(org, svg);
 

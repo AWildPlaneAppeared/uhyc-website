@@ -257,6 +257,8 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.025em; line-height: 1.08; fon
 .avatar { width: 46px; height: 46px; border-radius: 50%; margin-bottom: 0.45rem; display: grid; place-items: center;
   font-weight: 700; font-size: 1rem; color: #fff; background: var(--brand); object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.12); }
 .card.exec { min-width: 200px; padding: 1.3rem 1.4rem; gap: 0.25rem; border-color: rgba(91, 200, 238, 0.42); background: linear-gradient(180deg, #16204a, var(--night-2)); }
+.avatar.photo { overflow: hidden; padding: 0; background: var(--night-3); }
+.avatar.photo img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: center; }
 .card.exec .avatar { width: 68px; height: 68px; font-size: 1.35rem; }
 .card.exec .name { font-size: 1.08rem; }
 .card.exec .role { font-size: 0.7rem; }
