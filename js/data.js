@@ -129,7 +129,7 @@ window.UHYC = {
     board: "Upper Harbour Local Board",
     // Headshots, matched to people by first name. Add a file and a line here.
     photos: {
-      aston: "assets/photos/team/aston.jpg?v=4", percy: "assets/photos/team/percy.jpg", eric: "assets/photos/team/eric.jpg",
+      aston: "assets/photos/team/aston.jpg?v=5", percy: "assets/photos/team/percy.jpg", eric: "assets/photos/team/eric.jpg",
       vivian: "assets/photos/team/vivian.jpg", vani: "assets/photos/team/vani.jpg", suah: "assets/photos/team/suah.jpg",
       celine: "assets/photos/team/celine.jpg", lynn: "assets/photos/team/lynn.jpg", raamiz: "assets/photos/team/raamiz.jpg",
       cecilia: "assets/photos/team/cecilia.jpg", joy: "assets/photos/team/joy.jpg", sienna: "assets/photos/team/sienna.jpg",
