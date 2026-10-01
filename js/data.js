@@ -135,6 +135,7 @@ window.UHYC = {
       rahaf: "assets/photos/team/rahaf.jpg", "rui-han": "assets/photos/team/rui-han.jpg", jerry: "assets/photos/team/jerry.jpg",
       jolie: "assets/photos/team/jolie.jpg", sabrina: "assets/photos/team/sabrina.jpg", ricki: "assets/photos/team/ricki.jpg",
       kevin: "assets/photos/team/kevin.jpg", leon: "assets/photos/team/leon.jpg", bella: "assets/photos/team/bella.jpg",
+      sam: "assets/photos/team/sam.jpg", eva: "assets/photos/team/eva.jpg", alex: "assets/photos/team/alex.jpg",
     },
     current: {
       year: "2026",
