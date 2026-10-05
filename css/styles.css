@@ -222,6 +222,12 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.025em; line-height: 1.08; fon
 .pill.dark { background: rgba(255, 255, 255, 0.08); border-color: var(--night-hair); color: var(--night-text); }
 .pill.dark:hover { background: rgba(255, 255, 255, 0.14); }
 .org-archive { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--night-hair); }
+/* Group photo banner: wide and short, so it illustrates without eating the page */
+.team-banner { margin: 0 0 30px; border-radius: var(--r-l); overflow: hidden; border: 1px solid var(--night-hair);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); }
+.team-banner img { width: 100%; aspect-ratio: 2.7 / 1; object-fit: cover; object-position: 50% 42%; display: block; }
+/* Phones: keep the full width of the photo so nobody is cropped out */
+@media (max-width: 760px) { .team-banner { margin-bottom: 24px; } .team-banner img { aspect-ratio: 2.7 / 1; } }
 .archive-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 8px; }
 .archive-head .sub-head { margin: 0; }
 .org-members { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; padding: 22px; border-radius: var(--r-l); border: 1px solid var(--night-hair); background: rgba(255, 255, 255, 0.02); }

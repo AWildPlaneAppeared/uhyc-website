@@ -136,9 +136,12 @@
       o.value = c.year; o.textContent = c.year + " council";
       select.appendChild(o);
     });
+    const banner = $("#archiveBanner");
     const close = () => {
       if (chart) { chart.destroy(); chart = null; }
       host.replaceChildren();
+      banner.replaceChildren();
+      banner.hidden = true;
       archive.hidden = true;
       select.value = "";
     };
@@ -148,6 +151,14 @@
       if (chart) chart.destroy();
       title.textContent = `The ${c.year} council`;
       archive.hidden = false;
+      banner.replaceChildren();
+      banner.hidden = !c.photo;
+      if (c.photo) {
+        const img = document.createElement("img");
+        img.src = c.photo; img.alt = `The ${c.year} Upper Harbour Youth Council`; img.loading = "lazy";
+        img.onerror = () => { banner.hidden = true; };
+        banner.appendChild(img);
+      }
       chart = window.UHYCOrg.render(host, c, D.team.board, D.team.photos);
       archive.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
     });

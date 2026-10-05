@@ -152,6 +152,7 @@ window.UHYC = {
     },
     previous: [
       { year: "2025",
+        photo: "assets/photos/team-2025.jpg",   // optional group photo, shown as a banner above the chart
         execRows: [
           [ { role: "Co-Chair", name: "Raamiz" }, { role: "AYV Facilitator", name: "Rebecca" }, { role: "Co-Chair", name: "Cecilia" } ],
           [ { role: "Social Lead", name: "Joy" }, { role: "Secretary", name: "Percy" }, { role: "Treasurer", name: "Vivian" } ],
